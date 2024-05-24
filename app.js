@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-console.log("hello")
+console.log("Server is starting...");
+
 var ProductAdvertisingAPIv1 = require("./src/index");
-
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
 
 defaultClient.accessKey = "AKIAJNYDUIUL3RXQ5F3Q";
