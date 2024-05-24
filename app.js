@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+console.log("hello")
 var ProductAdvertisingAPIv1 = require("./src/index");
 
 var defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;

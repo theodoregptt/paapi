@@ -5,6 +5,7 @@
   "license": "Apache-2.0",
   "main": "src/index.js",
   "scripts": {
+    "start": "node app.js"
     "test": "./node_modules/mocha/bin/mocha --recursive",
     "lint": "eslint sampleGetBrowseNodesApi.js sampleGetItemsApi.js sampleSearchItemsApi.js sampleGetVariationsApi.js src/auth/*.js"
   },
