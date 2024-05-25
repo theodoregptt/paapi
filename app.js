@@ -17,13 +17,15 @@ defaultClient.region = "us-east-1";
 var api = new ProductAdvertisingAPIv1.DefaultApi();
 
 app.get("/search", (req, res) => {
-  const { keywords } = req.query;
+  const { keywords, minPrice, maxPrice } = req.query;
 
   var searchItemsRequest = new ProductAdvertisingAPIv1.SearchItemsRequest();
   searchItemsRequest["PartnerTag"] = "giftologyexpe-20";
   searchItemsRequest["PartnerType"] = "Associates";
   searchItemsRequest["Keywords"] = keywords;
   searchItemsRequest["ItemCount"] = 2;
+  searchItemsRequest["MinPrice"] = parseInt(minPrice, 10);
+  searchItemsRequest["MaxPrice"] = parseInt(maxPrice, 10);
   searchItemsRequest["Resources"] = [
     "Images.Primary.Medium",
     "ItemInfo.Title",
