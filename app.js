@@ -25,6 +25,8 @@ app.get("/search", (req, res) => {
   searchItemsRequest["Keywords"] = keywords;
   searchItemsRequest["ItemCount"] = 2;
   searchItemsRequest["Resources"] = [
+    "CustomerReviews.Count",
+    "CustomerReviews.StarRating",
     "Images.Primary.Medium",
     "ItemInfo.Title",
     "Offers.Listings.Price",
