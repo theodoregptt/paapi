@@ -27,7 +27,7 @@ app.get("/search", (req, res) => {
   searchItemsRequest["MinPrice"] = parseInt(minPrice, 10);
   searchItemsRequest["MaxPrice"] = parseInt(maxPrice, 10);
   searchItemsRequest["Resources"] = [
-    "Images.Primary.Medium",
+    "Images.Primary.Large",
     "ItemInfo.Title",
     "Offers.Listings.Price",
     "Offers.Listings.MerchantInfo",
